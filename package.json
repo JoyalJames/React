@@ -1,0 +1,22 @@
+{
+  "name": "joyal-react",
+  "version": "1.0.0",
+  "description": "\"This is Joyal\"",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoyalJames/React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoyalJames/React/issues"
+  },
+  "homepage": "https://github.com/JoyalJames/React#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
