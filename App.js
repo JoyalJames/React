@@ -1,12 +1,8 @@
-//const heading = React.createElement("h1",{id:"parent",xyz:"ohk"},"iam Joyal");
+import React from "react";
+import ReactDOM from 'react-dom/client';
 
 
 
-{/* <div id="parent">
-    <div id="child">
-        <h1>"Im h1</h1>   ---> if we want to add 2 or more children use []
-    </div>
-</div> */}
 const parent = React.createElement("div",{id:"parent"},
     [
         React.createElement("div",{id:"child"},[
