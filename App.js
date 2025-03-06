@@ -2,10 +2,15 @@ import React from "react";
 import ReactDOM from 'react-dom/client';
 
 
-// React.createElement => Object => HTMLElement(render)
-
-// JSX => is HTML / XML likes syntax
-//JSX => Babel transpiles it to React.createElement => RdactElement-JS object => HTML element(render)
-const JSXHeading = <h1 id="header">Hello Joyallll...!</h1>;
+const Title = () => (
+    <h2>Hellooo React!...</h2>
+);
+const HeaderComponent = () => (
+    //component composition
+    <div>
+        <Title />
+        <h3>Hii Joyal ....</h3>
+    </div>
+);
 const root = ReactDOM.createRoot(document.getElementById("root")); 
-root.render(JSXHeading);
+root.render(<HeaderComponent/>);

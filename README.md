@@ -17,3 +17,4 @@
 
 parceljs.org
 browserslist.dev
+babeljs.io
