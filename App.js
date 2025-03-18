@@ -19,15 +19,19 @@ const Header = () => {return(
       </div>
     </div>
 )};
-const RestaurantCard = () => {return(
+const RestaurantCard = ({resName,cuisines}) => 
+  //const RestaurantCard = (props)
+  {return(
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
       <img
         className="res-logo"
         alt="res-logo"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReXiXrdg36-17G-MPPYNVeoYdoJhESIMLnHw&s"
       />
-      <h3>Foods</h3>
-      <h4></h4>
+     {/* <h3>{props.resName}</h3> */}
+      <h3>{resName}</h3>
+      {/* <h4>{props.cuisines}</h4> */}
+      <h4>{cuisines}</h4>
       <h4> stars</h4>
       <h4>₹ FOR TWO</h4>
       <h4>1 minutes</h4>
@@ -38,8 +42,8 @@ const Body = ()=>{
         <div>
             <div className="search">Header</div>
             <div className="res-container">
-                <RestaurantCard/>
-                <RestaurantCard/>
+                <RestaurantCard resName = "Meghana Foods" cuisines = "Biryani, Mandhi"/>
+                <RestaurantCard resName = "KFC" cuisines = "Rice, Burger"/>
                 <RestaurantCard/>
                 <RestaurantCard/>
                 <RestaurantCard/>
