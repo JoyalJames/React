@@ -19,9 +19,14 @@ const Header = () => {return(
       </div>
     </div>
 )};
-const RestaurantCard = ({resName,cuisines}) => 
+const RestaurantCard = ({resData}) => 
   //const RestaurantCard = (props)
-  {return(
+//destructuring
+
+  {
+    const{id,age,date} = resData;
+    return(
+    
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
       <img
         className="res-logo"
@@ -29,31 +34,59 @@ const RestaurantCard = ({resName,cuisines}) =>
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReXiXrdg36-17G-MPPYNVeoYdoJhESIMLnHw&s"
       />
      {/* <h3>{props.resName}</h3> */}
-      <h3>{resName}</h3>
-      {/* <h4>{props.cuisines}</h4> */}
-      <h4>{cuisines}</h4>
+      <h3>{resData.weight}</h3>
+      <h4>{resData.age}</h4>
+      <h4>{resData.date}</h4>
       <h4> stars</h4>
       <h4>₹ FOR TWO</h4>
       <h4>1 minutes</h4>
     </div>
 )};
+const restList=[
+  {
+    "id": 1,
+    "age": 56,
+    "bornyear": 1963,
+    "date": 3,
+    "month": 7,
+    "weight" : 67.5
+  },
+  {
+    "id": 2,
+    "age": 66,
+    "bornyear": 1063,
+    "date": 6,
+    "month": 8,
+    "weight" : 7.5
+  },
+  {
+    "id": 3,
+    "age": 66,
+    "bornyear": 1063,
+    "date": 6,
+    "month": 8,
+    "weight" : 7.5
+  }
+]
 const Body = ()=>{
     return(
         <div>
             <div className="search">Header</div>
             <div className="res-container">
-                <RestaurantCard resName = "Meghana Foods" cuisines = "Biryani, Mandhi"/>
+                {/* <RestaurantCard resName = "Meghana Foods" cuisines = "Biryani, Mandhi"/>
                 <RestaurantCard resName = "KFC" cuisines = "Rice, Burger"/>
                 <RestaurantCard/>
                 <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
+                <RestaurantCard/> */}
+                {/* INSTEAD OF THS WE WANT TO WRITE MAP FN */}
+                {/* DONT FORGET TO PUT KEY  */}
+
+                {/* NOT USE INDEX AS KEYS */}
+                {/* resList.map(restaurant.map( restaurant,index=> 
+    <RestaurantCard key={index} resData = {restaurant}/>
+) */}
+
+                {restList.map((restaurant)=> <RestaurantCard key={restaurant.id} resData={restaurant}/>)}
             </div>
         </div>
     )
