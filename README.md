@@ -1,20 +1,10 @@
-# Parcel
-- Dev Build
-- Local server
-- HMR - Hot module replacement
-- File watching Algorithm written in C++
-- Caching - Faster builds
-- Image Optimization
-- Minification
-- Bundling
-- Compress
-- Consistent Hashing
-- Code Splitting
-- Differential Bundling - support older browsers
-- HTTPs
-- Different DEv and Prduction bundles
+# Two types of export and import
 
+- [x] Default Export/import
+export default components;
+import component from “ path”;
 
-parceljs.org
-browserslist.dev
-babeljs.io
+- [x] Named Export/import
+export const Component;
+import {Component} from “path”;  
+Used when multiple exports
