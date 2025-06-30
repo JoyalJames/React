@@ -2,6 +2,7 @@ import RestaurantCard from "./Restaurant";
 // import { restList } from "../utils/constants";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = ()=>{
       // Local State Variable - Super powerful variable
@@ -41,7 +42,8 @@ console.log("body rendered");
             <div className="search"><button onClick={() => {
                         //filter
                     const filteredList = listOfRestaurants.filter(
-                    (res) => res.info.avgRating > 4.5
+                    (res) => res.info.avgRating > 4.7
+                    
                     );
                     setListOfRestraunt(filteredList);
                     console.log(filteredList);
@@ -49,7 +51,11 @@ console.log("body rendered");
                 filter</button>
             </div>
             <div className="res-container">
-                {filteredlistOfRestaurants.map((restaurant)=> <RestaurantCard key={restaurant.info.id} resData={restaurant.info}/>)}
+                {filteredlistOfRestaurants.map((restaurant)=> 
+                
+                <Link key={restaurant.info.id} to={"/restaurant/"+restaurant.info.id}><RestaurantCard  resData={restaurant.info}/></Link>
+            
+            )}
             </div>
         </div>
     )
